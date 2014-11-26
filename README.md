@@ -18,3 +18,25 @@ performs authorization as a "device". Practically, you're not bound to the GUI
 module anymore, so for example, you could write a server side software querying
 for data via the Google API. It is basically the "how it should be done"-way
 for OAuth2 with Qt apps.
+
+How tu use
+==========
+```cpp
+  // Create service
+  GoogleOAuth2Service oAuth2Service(
+    "{Client ID}",
+    "{Client Secret}",
+    "{Scope}");
+  // Retrieve user code, ie. information for requesting access.
+  // Asynchronous, listen for userAuthorizationRequired-signal.
+  oAuth2Service.retrieveUserCode();
+  
+  // Once the user has granted access, you can retrieve an access token via the device token.
+  // Asynchronous, listen for accessTokenReceived-signal.
+  oAuth2Service.retrieveAccessToken("{Device Token}");
+  
+  // When the access token expires, you need to obtain a new access token via the provided refresh token.
+  // Asynchronous, listen for accessTokenReceived-signal.
+  oAuth2Service.refreshAccessToken("{Refresh Token}");
+
+```
