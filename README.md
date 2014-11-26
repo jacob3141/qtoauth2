@@ -40,3 +40,33 @@ How tu use
   oAuth2Service.refreshAccessToken("{Refresh Token}");
 
 ```
+For reference, these are the signal emitted by the service:
+```cpp
+    /**
+     * The server prompts you to authenticate your application.
+     * @param deviceCode Store the device code to query API tokens.
+     * @param userCode The user is supposed to enter the userCode at the given verificationUrl.
+     * @param verificationUrl The url that the user code needs to be entered at.
+     * @param expiresIn
+     * @param interval
+     */
+    void userAuthorizationRequired(QString deviceCode,
+                                   QString userCode,
+                                   QString verificationUrl,
+                                   int expiresIn,
+                                   int interval);
+
+    /**
+     * The server sent you the queried access token.
+     * @param accessToken The API access token. You will need this to access the queried API.
+     * @param tokenType The token type.
+     * @param expiresIn
+     * @param refreshToken The refresh token. You will need this to renew the accessToken once it has expired. May be empty.
+     */
+    void accessTokenReceived(QString accessToken,
+                             QString tokenType,
+                             int expiresIn,
+                             QString refreshToken);
+
+    void tokenRetrieveError(QString error, QString errorDescription);
+```
