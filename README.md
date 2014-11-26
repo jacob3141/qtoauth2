@@ -70,3 +70,4 @@ For reference, these are the signal emitted by the service:
 
     void tokenRetrieveError(QString error, QString errorDescription);
 ```
+![Flow](https://github.com/cybercatalyst/qoauth2/blob/master/flow.png "Flow")
