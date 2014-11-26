@@ -19,7 +19,7 @@ module anymore, so for example, you could write a server side software querying
 for data via the Google API. It is basically the "how it should be done"-way
 for OAuth2 with Qt apps.
 
-How tu use
+How to use
 ==========
 ```cpp
   // Create service
@@ -40,7 +40,7 @@ How tu use
   oAuth2Service.refreshAccessToken("{Refresh Token}");
 
 ```
-For reference, these are the signal emitted by the service:
+For reference, these are the signals emitted by the service:
 ```cpp
     /**
      * The server prompts you to authenticate your application.
