@@ -23,9 +23,9 @@ QT       += core network
 QT       -= gui
 
 TEMPLATE = lib
-CONFIG += static
+CONFIG += staticlib flat
 
-TARGET = libqoauth2
+TARGET = qoauth2
 
 SOURCES += \
     oauth2service.cpp
