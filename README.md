@@ -21,6 +21,10 @@ for OAuth2 with Qt apps.
 
 How to use
 ==========
+
+qoauth2 is available as a pod through qt-pods. See here for more info:
+https://github.com/cybercatalyst/qt-pods
+
 ```cpp
   // Create service
   GoogleOAuth2Service oAuth2Service(
