@@ -2,5 +2,5 @@ INCLUDEPATH += \
     $$PWD
 
 LIBS += \
-    -L../qoauth2 -lqoauth2
+    -L../qtoauth2 -lqtoauth2
 
